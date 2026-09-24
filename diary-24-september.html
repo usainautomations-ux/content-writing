@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diary Page</title>
+<style>
+
+  @font-face{font-family:'KalamL';src:url('file:///root/.fonts/Kalam_YA9dr0Wd4kDdMuhW.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'KalamL';src:url('file:///root/.fonts/Kalam_YA9Qr0Wd4kDdMtDqHQLL.ttf') format('truetype');font-weight:700;}
+  @font-face{font-family:'CaveatL';src:url('file:///root/.fonts/Caveat_WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SII.ttf') format('truetype');font-weight:400 700;}
+  @font-face{font-family:'PatrickL';src:url('file:///root/.fonts/Patrick_LDI1apSQOAYtSuYWp8ZhfYeMWQ.ttf') format('truetype');}
+  @font-face{font-family:'UrduL';src:url('file:///root/.fonts/NotoNastaliqUrdu-Regular.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'UrduL';src:url('file:///root/.fonts/NotoNastaliqUrdu-Bold.ttf') format('truetype');font-weight:700;}
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { width:1240px; background:#d8d2c4; font-family:'KalamL',cursive; }
+
+  .page {
+    width:1240px; min-height:1330px; background:#fdfcf5;
+    background-image:
+      repeating-linear-gradient(to bottom, transparent 0 45px, #cfe0ec 45px 46px);
+    background-position: 0 150px;
+    position:relative; padding:56px 70px 60px 128px;
+    box-shadow: inset -26px 0 46px -34px rgba(0,0,0,.28), inset 26px 0 46px -34px rgba(0,0,0,.18);
+  }
+  /* red margin */
+  .page:before{ content:""; position:absolute; top:0; bottom:0; left:104px; width:2px; background:#e8a0a8; }
+  .page:after { content:""; position:absolute; top:0; bottom:0; left:112px; width:2px; background:#e8a0a8; }
+  /* punch holes */
+  .holes{ position:absolute; left:38px; top:0; height:100%; }
+  .holes i{ position:absolute; left:0; width:30px; height:30px; border-radius:50%;
+            background:#e6e2d6; box-shadow: inset 1px 2px 3px rgba(0,0,0,.28); }
+
+  .head { position:relative; z-index:2; margin-bottom:10px; }
+  .title { font-family:'CaveatL',cursive; font-size:52px; font-weight:700; color:#1b3a63;
+           text-align:center; letter-spacing:1px; }
+  .title span{ border-bottom:3px double #1b3a63; padding:0 14px 4px; }
+
+  .meta { display:flex; gap:64px; margin:26px 0 6px; font-size:27px; color:#20252b; }
+  .meta .lbl{ font-weight:700; }
+  .meta .val{ font-family:'CaveatL',cursive; font-size:36px; font-weight:700; color:#12489b;
+              border-bottom:2px solid #7d8794; padding:0 20px 1px; min-width:250px;
+              display:inline-block; text-align:center; transform:rotate(-.5deg); }
+
+  .sechead{ font-family:'CaveatL',cursive; font-size:42px; font-weight:700; color:#8a1c1c;
+            margin:26px 0 6px; }
+  .sechead span{ border-bottom:2px solid #8a1c1c; padding-bottom:2px; }
+
+  table{ width:100%; border-collapse:collapse; position:relative; z-index:2; }
+  td{ vertical-align:top; padding:10px 8px 12px 0; }
+  tr{ border-bottom:1px dashed rgba(60,80,110,.28); }
+  .num{ width:42px; font-size:25px; color:#4a5560; font-weight:700; padding-top:14px; }
+  .sub{ width:212px; font-size:31px; font-weight:700; color:#1b3a63; padding-top:8px; }
+  .sub em{ display:block; font-style:normal; font-size:19px; color:#6b7480; font-weight:400; }
+  .task{ font-size:28px; color:#14304f; line-height:1.5; padding-top:10px; }
+  .task b{ color:#8a1c1c; }
+  .test{ display:inline-block; font-family:'PatrickL',cursive; font-size:19px;
+         background:#ffe9a8; border:2px solid #d99b16; color:#7a4b06; border-radius:6px;
+         padding:1px 12px 3px; margin-left:10px; transform:rotate(-1.5deg); letter-spacing:1px; }
+
+  .ur{ display:inline; font-family:'UrduL',serif; direction:rtl; text-align:right;
+       font-size:25px; line-height:2.5; color:#14304f; }
+
+  .note{ margin-top:30px; position:relative; z-index:2; background:#fff6cf;
+         border:2px dashed #c9a227; border-radius:10px; padding:16px 22px;
+         font-size:25px; color:#5f4a06; transform:rotate(-.35deg);
+         box-shadow:0 3px 8px rgba(0,0,0,.08); }
+  .note b{ color:#8a1c1c; }
+  .note .ur{ display:block; font-size:23px; line-height:2.3; margin-top:2px; color:#5f4a06; }
+
+  .foot{ position:relative; z-index:2; display:flex; justify-content:space-between;
+         align-items:flex-end; margin-top:46px; }
+  .sign{ font-family:'CaveatL',cursive; font-size:26px; color:#4a5560; }
+  .sign u{ display:inline-block; width:230px; border-bottom:2px solid #7d8794;
+           text-decoration:none; }
+  .stamp{ font-family:'PatrickL',cursive; font-size:26px; color:#1d7a3f;
+          border:3px solid #1d7a3f; border-radius:10px; padding:6px 20px 9px;
+          transform:rotate(-7deg); opacity:.75; letter-spacing:2px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="holes">
+    <i style="top:250px"></i><i style="top:700px"></i><i style="top:1150px"></i>
+  </div>
+
+  <div class="head">
+    <div class="title"><span>Homework Diary</span></div>
+    <div class="meta">
+      <div><span class="lbl">Day:</span> <span class="val">Thursday</span></div>
+      <div><span class="lbl">Date:</span> <span class="val">24 September, 26</span></div>
+    </div>
+  </div>
+
+  <div class="sechead"><span>Subjects</span></div>
+
+  <table>
+    <tr>
+      <td class="num">1.</td><td class="sub">Geography</td>
+      <td class="task">Unit 1, 2, 5 + Glossary + MCQs</td>
+    </tr>
+    <tr>
+      <td class="num">2.</td><td class="sub">History</td>
+      <td class="task">Page 108 &ndash; 110 &mdash; all mind maps + blanks + short questions</td>
+    </tr>
+    <tr>
+      <td class="num">3.</td><td class="sub">Science</td>
+      <td class="task">Unit 8 &mdash; all short questions + numericals</td>
+    </tr>
+    <tr>
+      <td class="num">4.</td><td class="sub">Islamiyat<em>اسلامیات</em></td>
+      <td class="task">
+        <span class="ur">عقیدۂ ختمِ نبوت + آسمانی کتابوں پر ایمان</span>
+        <span class="test">TEST</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="num">5.</td><td class="sub">Urdu<em>اردو</em></td>
+      <td class="task">
+        <span class="ur">&rdquo;آؤ بچو سیر کریں تم پاکستان کی&ldquo; &mdash; تمام مختصر سوالات و جوابات اور الفاظ کے معنی</span>
+        <span class="test">TEST</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="num">6.</td><td class="sub">English</td>
+      <td class="task">Unit 1 &mdash; Q/A &nbsp;|&nbsp; Unit 2 &mdash; all copy work <span class="test">TEST</span></td>
+    </tr>
+    <tr>
+      <td class="num">7.</td><td class="sub">Nazra<em>ناظرہ</em></td>
+      <td class="task">
+        <span class="ur">سورۃ الضحیٰ</span>
+        <span class="test">TEST</span>
+      </td>
+    </tr>
+    <tr style="border-bottom:none">
+      <td class="num">8.</td><td class="sub">Math</td>
+      <td class="task">Class work is <b>test</b></td>
+    </tr>
+  </table>
+
+  <div class="note">
+    <b>Note:</b> Nazra, Urdu &amp; Islamiyat &mdash; write / translate in Urdu language.
+    <div class="ur">نوٹ: ناظرہ، اردو اور اسلامیات کا کام اردو زبان میں لکھیں۔</div>
+  </div>
+
+  <div class="foot">
+    <div class="sign">Teacher&rsquo;s Sign: <u></u></div>
+    <div class="sign">Parent&rsquo;s Sign: <u></u></div>
+    <div class="stamp">CHECKED</div>
+  </div>
+</div>
+</body>
+</html>
