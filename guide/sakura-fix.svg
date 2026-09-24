@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1560" viewBox="0 0 1120 1560" font-family="Segoe UI, Arial, sans-serif">
+<rect width="1120" height="1560" fill="#ffffff"/>
+
+<rect x="0" y="0" width="1120" height="96" fill="#1f2430"/>
+<text x="40" y="48" fill="#ffffff" font-size="32" font-weight="700">Your leaves.dds has 2 errors</text>
+<text x="40" y="80" fill="#9fb3c8" font-size="19">OpenIV already shows you both. Read the little grey label under each texture.</text>
+
+<!-- EVIDENCE -->
+<rect x="40" y="130" width="1040" height="210" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<text x="70" y="170" font-size="20" font-weight="700" fill="#1f2430">What OpenIV says right now</text>
+
+<rect x="70" y="190" width="470" height="60" rx="6" fill="#fff0f0" stroke="#d94a4a" stroke-width="2"/>
+<text x="88" y="215" font-size="17" font-family="Consolas, monospace" fill="#333">leaves</text>
+<text x="88" y="240" font-size="17" font-family="Consolas, monospace" fill="#b02020" font-weight="700">400x400, DXT5, MipMaps: 1</text>
+<text x="556" y="228" font-size="30" fill="#d94a4a">✘</text>
+
+<rect x="70" y="262" width="470" height="60" rx="6" fill="#fff0f0" stroke="#d94a4a" stroke-width="2"/>
+<text x="88" y="287" font-size="17" font-family="Consolas, monospace" fill="#333">leaves_lod</text>
+<text x="88" y="312" font-size="17" font-family="Consolas, monospace" fill="#b02020" font-weight="700">400x400, DXT5, MipMaps: 1</text>
+<text x="556" y="300" font-size="30" fill="#d94a4a">✘</text>
+
+<rect x="610" y="190" width="440" height="60" rx="6" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/>
+<text x="628" y="215" font-size="17" font-family="Consolas, monospace" fill="#333">bark</text>
+<text x="628" y="240" font-size="17" font-family="Consolas, monospace" fill="#1e7a3e" font-weight="700">512x1024, DXT1, MipMaps: 8</text>
+<text x="1063" y="228" font-size="30" fill="#2e9e54">✔</text>
+<text x="610" y="285" font-size="17" fill="#55606e">bark is the ORIGINAL file — you did not touch it.</text>
+<text x="610" y="312" font-size="17" fill="#55606e">That is why it is correct. Copy its numbers.</text>
+
+<!-- ERROR 1 -->
+<rect x="40" y="370" width="1040" height="245" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="410" r="22" fill="#d94a4a"/><text x="80" y="418" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">1</text>
+<text x="118" y="418" font-size="24" font-weight="700" fill="#1f2430">400 x 400 is a forbidden size</text>
+<text x="70" y="455" font-size="18" fill="#333">GTA only accepts these numbers (double each time):</text>
+
+<g font-size="19" font-family="Consolas, monospace">
+<rect x="70" y="472" width="95" height="44" rx="6" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/><text x="117" y="501" text-anchor="middle" fill="#1e7a3e" font-weight="700">64</text>
+<rect x="178" y="472" width="95" height="44" rx="6" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/><text x="225" y="501" text-anchor="middle" fill="#1e7a3e" font-weight="700">128</text>
+<rect x="286" y="472" width="95" height="44" rx="6" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/><text x="333" y="501" text-anchor="middle" fill="#1e7a3e" font-weight="700">256</text>
+<rect x="394" y="472" width="95" height="44" rx="6" fill="#d6f0de" stroke="#2e9e54" stroke-width="3"/><text x="441" y="501" text-anchor="middle" fill="#1e7a3e" font-weight="700">512</text>
+<rect x="502" y="472" width="95" height="44" rx="6" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/><text x="549" y="501" text-anchor="middle" fill="#1e7a3e" font-weight="700">1024</text>
+<rect x="640" y="472" width="150" height="44" rx="6" fill="#fff0f0" stroke="#d94a4a" stroke-width="3"/><text x="715" y="501" text-anchor="middle" fill="#b02020" font-weight="700">400 ✘</text>
+</g>
+<text x="441" y="537" font-size="15" text-anchor="middle" fill="#1e7a3e">use this one</text>
+
+<rect x="70" y="552" width="980" height="46" rx="6" fill="#ffffff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="90" y="581" font-size="18" fill="#2d6cdf" font-weight="600">FIX in Paint.NET:   menu  Image  →  Resize...  →  type  512  x  512  →  OK</text>
+
+<!-- ERROR 2 -->
+<rect x="40" y="645" width="1040" height="290" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="685" r="22" fill="#d94a4a"/><text x="80" y="693" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">2</text>
+<text x="118" y="693" font-size="24" font-weight="700" fill="#1f2430">MipMaps: 1  =  you forgot the mipmaps</text>
+<text x="70" y="732" font-size="18" fill="#333">Mipmaps are small copies of the picture for when the tree is far away.</text>
+<text x="70" y="760" font-size="18" fill="#333">With <tspan font-weight="700" fill="#b02020">MipMaps: 1</tspan> the far tree turns into ugly white sparkling dots — like your preview.</text>
+
+<g>
+<rect x="70" y="785" width="90" height="90" fill="#f7b6cf" stroke="#999"/>
+<rect x="170" y="785" width="45" height="45" fill="#f7b6cf" stroke="#999"/>
+<rect x="225" y="785" width="22" height="22" fill="#f7b6cf" stroke="#999"/>
+<rect x="257" y="785" width="11" height="11" fill="#f7b6cf" stroke="#999"/>
+<rect x="278" y="785" width="6" height="6" fill="#f7b6cf" stroke="#999"/>
+<text x="70" y="900" font-size="16" fill="#55606e">512 → 256 → 128 → 64 → ... (10 copies)</text>
+</g>
+
+<rect x="330" y="785" width="720" height="46" rx="6" fill="#ffffff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="350" y="814" font-size="18" fill="#2d6cdf" font-weight="600">FIX:  File → Save As → leaves.dds</text>
+<rect x="330" y="841" width="720" height="76" rx="6" fill="#fff8e6" stroke="#e0a800" stroke-width="2"/>
+<text x="350" y="870" font-size="18" fill="#5c4a00">In the save window:  Format = <tspan font-weight="700">BC3 (Linear, DXT5)</tspan></text>
+<text x="350" y="900" font-size="18" fill="#5c4a00">and tick the box  <tspan font-weight="700" fill="#1e7a3e">☑ Generate Mip Maps</tspan>   ← you missed this</text>
+
+<!-- CHECK 3 -->
+<rect x="40" y="965" width="1040" height="330" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="1005" r="22" fill="#e0a800"/><text x="80" y="1013" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">3</text>
+<text x="118" y="1013" font-size="24" font-weight="700" fill="#1f2430">Also check: too much empty space</text>
+<text x="70" y="1050" font-size="18" fill="#333">Your flowers sit in the middle with big empty edges. The tree model cuts this picture</text>
+<text x="70" y="1078" font-size="18" fill="#333">into pieces. Every piece that lands on empty space becomes an <tspan font-weight="700">invisible leaf</tspan>.</text>
+
+<text x="215" y="1120" font-size="17" text-anchor="middle" fill="#b02020" font-weight="600">yours now</text>
+<rect x="115" y="1132" width="200" height="200" fill="#d8d8d8" stroke="#d94a4a" stroke-width="2"/>
+<g fill="#f7b6cf">
+<circle cx="200" cy="1210" r="20"/><circle cx="228" cy="1222" r="18"/><circle cx="212" cy="1248" r="19"/><circle cx="185" cy="1238" r="16"/><circle cx="232" cy="1252" r="14"/>
+</g>
+<text x="215" y="1165" font-size="14" text-anchor="middle" fill="#b02020">empty = invisible</text>
+
+<text x="480" y="1230" font-size="36" fill="#2e9e54">→</text>
+
+<text x="660" y="1120" font-size="17" text-anchor="middle" fill="#1e7a3e" font-weight="600">better</text>
+<rect x="560" y="1132" width="200" height="200" fill="#d8d8d8" stroke="#2e9e54" stroke-width="2"/>
+<g fill="#f7b6cf">
+<circle cx="600" cy="1170" r="22"/><circle cx="645" cy="1160" r="20"/><circle cx="700" cy="1172" r="22"/><circle cx="740" cy="1165" r="18"/>
+<circle cx="585" cy="1225" r="20"/><circle cx="635" cy="1232" r="22"/><circle cx="690" cy="1222" r="20"/><circle cx="738" cy="1230" r="19"/>
+<circle cx="600" cy="1285" r="22"/><circle cx="650" cy="1292" r="20"/><circle cx="705" cy="1282" r="22"/><circle cx="745" cy="1290" r="18"/>
+<circle cx="622" cy="1196" r="15"/><circle cx="672" cy="1256" r="15"/><circle cx="718" cy="1200" r="14"/>
+</g>
+<text x="660" y="1355" font-size="15" text-anchor="middle" fill="#1e7a3e">flowers fill the whole square</text>
+
+<rect x="800" y="1132" width="250" height="200" rx="8" fill="#fff8e6" stroke="#e0a800" stroke-width="2"/>
+<text x="820" y="1162" font-size="17" font-weight="700" fill="#8a6a00">Best way to be sure:</text>
+<text x="820" y="1192" font-size="16" fill="#5c4a00">Open the ORIGINAL</text>
+<text x="820" y="1216" font-size="16" fill="#5c4a00">olive leaves.dds and copy</text>
+<text x="820" y="1240" font-size="16" fill="#5c4a00">exactly where the green</text>
+<text x="820" y="1264" font-size="16" fill="#5c4a00">leaves were.</text>
+<text x="820" y="1300" font-size="16" fill="#8a6a00">Put pink flowers in the</text>
+<text x="820" y="1322" font-size="16" fill="#8a6a00">same places.</text>
+
+<!-- GOAL -->
+<rect x="40" y="1325" width="1040" height="195" rx="12" fill="#e8f7ec" stroke="#2e9e54" stroke-width="3"/>
+<text x="70" y="1368" font-size="24" font-weight="700" fill="#1e7a3e">✔ When it is correct, OpenIV will say:</text>
+<rect x="70" y="1390" width="470" height="52" rx="6" fill="#ffffff" stroke="#2e9e54" stroke-width="2"/>
+<text x="88" y="1412" font-size="17" font-family="Consolas, monospace" fill="#333">leaves</text>
+<text x="88" y="1434" font-size="17" font-family="Consolas, monospace" fill="#1e7a3e" font-weight="700">512x512, DXT5, MipMaps: 10</text>
+<rect x="580" y="1390" width="470" height="52" rx="6" fill="#ffffff" stroke="#2e9e54" stroke-width="2"/>
+<text x="598" y="1412" font-size="17" font-family="Consolas, monospace" fill="#333">leaves_lod</text>
+<text x="598" y="1434" font-size="17" font-family="Consolas, monospace" fill="#1e7a3e" font-weight="700">256x256, DXT5, MipMaps: 9</text>
+<text x="70" y="1478" font-size="17" fill="#1e7a3e">leaves_lod is the far-away picture — make it 256x256, it does not need to be big.</text>
+<text x="70" y="1504" font-size="17" fill="#1e7a3e">Keep the file names exactly the same: leaves.dds and leaves_lod.dds</text>
+</svg>
