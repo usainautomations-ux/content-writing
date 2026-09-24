@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1740" viewBox="0 0 1120 1740" font-family="Segoe UI, Arial, sans-serif">
+<rect width="1120" height="1740" fill="#ffffff"/>
+
+<!-- HEADER -->
+<rect x="0" y="0" width="1120" height="110" fill="#1f2430"/>
+<text x="40" y="52" fill="#ffffff" font-size="34" font-weight="700">Olive tree  →  Sakura tree</text>
+<text x="40" y="88" fill="#9fb3c8" font-size="20">Retexture: you only repaint the pictures. You do NOT touch the 3D model.</text>
+<text x="1080" y="70" fill="#ff9ec7" font-size="46" text-anchor="end">🌸</text>
+
+<!-- STEP 1 -->
+<rect x="40" y="145" width="1040" height="235" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="185" r="22" fill="#2d6cdf"/><text x="80" y="193" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">1</text>
+<text x="118" y="193" font-size="24" font-weight="700" fill="#1f2430">Your 5 files — what each one does</text>
+
+<rect x="70" y="222" width="300" height="42" rx="6" fill="#ffe3ef" stroke="#e0699b" stroke-width="2"/>
+<text x="86" y="250" font-size="18" font-weight="700" fill="#a82d68">leaves.dds</text>
+<text x="390" y="250" font-size="18" fill="#333">= the leaves.  ← PAINT THIS ONE (90% of the job)</text>
+
+<rect x="70" y="272" width="300" height="42" rx="6" fill="#ffe3ef" stroke="#e0699b" stroke-width="2"/>
+<text x="86" y="300" font-size="18" font-weight="700" fill="#a82d68">leaves_lod.dds</text>
+<text x="390" y="300" font-size="18" fill="#333">= same leaves, seen from far.  ← PAINT THIS TOO</text>
+
+<rect x="70" y="322" width="300" height="38" rx="6" fill="#eef1f5" stroke="#bcc6d2" stroke-width="2"/>
+<text x="86" y="347" font-size="17" fill="#55606e">bark.dds / bark_lod.dds / bark_NRM.dds</text>
+<text x="390" y="347" font-size="18" fill="#777">= the trunk.  Optional. You can skip.</text>
+
+<!-- STEP 2 -->
+<rect x="40" y="405" width="1040" height="150" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="445" r="22" fill="#2d6cdf"/><text x="80" y="453" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">2</text>
+<text x="118" y="453" font-size="24" font-weight="700" fill="#1f2430">Take the picture OUT</text>
+<rect x="90" y="478" width="230" height="52" rx="8" fill="#fff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="205" y="510" font-size="19" text-anchor="middle" fill="#2d6cdf" font-weight="600">Open .ytd in OpenIV</text>
+<text x="345" y="510" font-size="26" fill="#2d6cdf">→</text>
+<rect x="385" y="478" width="230" height="52" rx="8" fill="#fff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="500" y="510" font-size="19" text-anchor="middle" fill="#2d6cdf" font-weight="600">Right-click → Export</text>
+<text x="640" y="510" font-size="26" fill="#2d6cdf">→</text>
+<rect x="680" y="478" width="230" height="52" rx="8" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/>
+<text x="795" y="510" font-size="19" text-anchor="middle" fill="#1e7a3e" font-weight="700">Save as .PNG</text>
+<text x="930" y="512" font-size="16" fill="#777">(PNG, not DDS)</text>
+
+<!-- STEP 3 -->
+<rect x="40" y="580" width="1040" height="400" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="620" r="22" fill="#2d6cdf"/><text x="80" y="628" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">3</text>
+<text x="118" y="628" font-size="24" font-weight="700" fill="#1f2430">Paint it pink in Paint.NET</text>
+
+<!-- before atlas -->
+<text x="185" y="672" font-size="18" text-anchor="middle" fill="#55606e" font-weight="600">leaves.png  (now)</text>
+<rect x="85" y="685" width="200" height="200" fill="#d8d8d8"/>
+<g>
+<rect x="85" y="685" width="200" height="200" fill="none"/>
+<path d="M120 700 q-25 35 0 70 q25-35 0-70" fill="#5f7d3a"/>
+<path d="M165 705 q-22 32 0 64 q22-32 0-64" fill="#6f8f46"/>
+<path d="M215 700 q-25 35 0 70 q25-35 0-70" fill="#54702f"/>
+<path d="M120 800 q-25 35 0 70 q25-35 0-70" fill="#6f8f46"/>
+<path d="M165 805 q-22 32 0 64 q22-32 0-64" fill="#54702f"/>
+<path d="M215 800 q-25 35 0 70 q25-35 0-70" fill="#5f7d3a"/>
+</g>
+<line x1="85" y1="785" x2="285" y2="785" stroke="#aaa" stroke-dasharray="5 5"/>
+<line x1="185" y1="685" x2="185" y2="885" stroke="#aaa" stroke-dasharray="5 5"/>
+<text x="185" y="910" font-size="15" text-anchor="middle" fill="#777">grey = transparent</text>
+
+<text x="400" y="790" font-size="40" fill="#e0699b">→</text>
+
+<!-- after atlas -->
+<text x="600" y="672" font-size="18" text-anchor="middle" fill="#a82d68" font-weight="600">leaves.png  (yours)</text>
+<rect x="500" y="685" width="200" height="200" fill="#d8d8d8"/>
+<g fill="#f7b6cf">
+<circle cx="525" cy="720" r="13"/><circle cx="545" cy="712" r="11"/><circle cx="538" cy="737" r="12"/><circle cx="518" cy="742" r="10"/>
+<circle cx="588" cy="722" r="12"/><circle cx="606" cy="714" r="10"/><circle cx="598" cy="740" r="11"/>
+<circle cx="648" cy="718" r="13"/><circle cx="668" cy="730" r="11"/><circle cx="645" cy="742" r="11"/>
+<circle cx="525" cy="820" r="13"/><circle cx="545" cy="812" r="11"/><circle cx="538" cy="837" r="12"/>
+<circle cx="588" cy="822" r="12"/><circle cx="606" cy="814" r="10"/><circle cx="598" cy="840" r="11"/>
+<circle cx="648" cy="818" r="13"/><circle cx="668" cy="830" r="11"/><circle cx="645" cy="842" r="11"/>
+</g>
+<g fill="#e08cb0">
+<circle cx="533" cy="726" r="5"/><circle cx="596" cy="728" r="5"/><circle cx="655" cy="728" r="5"/>
+<circle cx="533" cy="826" r="5"/><circle cx="596" cy="828" r="5"/><circle cx="655" cy="828" r="5"/>
+</g>
+<line x1="500" y1="785" x2="700" y2="785" stroke="#aaa" stroke-dasharray="5 5"/>
+<line x1="600" y1="685" x2="600" y2="885" stroke="#aaa" stroke-dasharray="5 5"/>
+
+<rect x="740" y="685" width="320" height="225" rx="8" fill="#fff8e6" stroke="#e0a800" stroke-width="2"/>
+<text x="760" y="715" font-size="19" font-weight="700" fill="#8a6a00">RULES — do not break:</text>
+<text x="760" y="750" font-size="17" fill="#5c4a00">✔ Paint INSIDE the same squares</text>
+<text x="760" y="780" font-size="17" fill="#5c4a00">✔ Keep same size (512 x 512)</text>
+<text x="760" y="810" font-size="17" fill="#5c4a00">✔ Keep same file name</text>
+<text x="760" y="840" font-size="17" fill="#5c4a00">✔ Edges sharp, not blurry</text>
+<text x="760" y="870" font-size="17" fill="#5c4a00">✘ Do not move the leaves</text>
+<text x="760" y="898" font-size="15" fill="#8a6a00">(moving them = broken tree in game)</text>
+
+<!-- STEP 4 -->
+<rect x="40" y="1005" width="1040" height="240" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="1045" r="22" fill="#2d6cdf"/><text x="80" y="1053" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">4</text>
+<text x="118" y="1053" font-size="24" font-weight="700" fill="#1f2430">Save back as .DDS  —  Paint.NET settings</text>
+
+<rect x="80" y="1080" width="480" height="145" rx="8" fill="#ffffff" stroke="#bcc6d2" stroke-width="2"/>
+<text x="100" y="1110" font-size="18" font-weight="700" fill="#a82d68">leaves.dds  /  leaves_lod.dds</text>
+<text x="100" y="1145" font-size="18" fill="#333">Format:  <tspan font-weight="700" fill="#1e7a3e">BC3 (Linear, DXT5)</tspan></text>
+<text x="100" y="1178" font-size="18" fill="#333">Generate Mip Maps:  <tspan font-weight="700" fill="#1e7a3e">ON ✔</tspan></text>
+<text x="100" y="1208" font-size="16" fill="#777">DXT5 keeps the transparent parts.</text>
+
+<rect x="590" y="1080" width="470" height="145" rx="8" fill="#ffffff" stroke="#bcc6d2" stroke-width="2"/>
+<text x="610" y="1110" font-size="18" font-weight="700" fill="#55606e">bark.dds  /  bark_lod.dds</text>
+<text x="610" y="1145" font-size="18" fill="#333">Format:  <tspan font-weight="700" fill="#1e7a3e">BC1 (Linear, DXT1)</tspan></text>
+<text x="610" y="1178" font-size="18" fill="#333">Generate Mip Maps:  <tspan font-weight="700" fill="#1e7a3e">ON ✔</tspan></text>
+<text x="610" y="1208" font-size="16" fill="#777">bark_NRM.dds → don't touch it.</text>
+
+<!-- STEP 5 -->
+<rect x="40" y="1270" width="1040" height="150" rx="12" fill="#f5f7fa" stroke="#d3dae3" stroke-width="2"/>
+<circle cx="80" cy="1310" r="22" fill="#2d6cdf"/><text x="80" y="1318" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">5</text>
+<text x="118" y="1318" font-size="24" font-weight="700" fill="#1f2430">Put the picture BACK</text>
+<rect x="90" y="1343" width="270" height="52" rx="8" fill="#fff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="225" y="1375" font-size="18" text-anchor="middle" fill="#2d6cdf" font-weight="600">OpenIV → Edit mode</text>
+<text x="380" y="1375" font-size="26" fill="#2d6cdf">→</text>
+<rect x="420" y="1343" width="270" height="52" rx="8" fill="#fff" stroke="#2d6cdf" stroke-width="2"/>
+<text x="555" y="1375" font-size="18" text-anchor="middle" fill="#2d6cdf" font-weight="600">Right-click → Replace</text>
+<text x="710" y="1375" font-size="26" fill="#2d6cdf">→</text>
+<rect x="750" y="1343" width="290" height="52" rx="8" fill="#e8f7ec" stroke="#2e9e54" stroke-width="2"/>
+<text x="895" y="1375" font-size="18" text-anchor="middle" fill="#1e7a3e" font-weight="700">Save → stream folder</text>
+
+<!-- WARNING -->
+<rect x="40" y="1450" width="1040" height="250" rx="12" fill="#fff0f0" stroke="#d94a4a" stroke-width="3"/>
+<text x="70" y="1495" font-size="24" font-weight="700" fill="#b02020">⚠  If the tree is STILL GREEN in game — read this</text>
+<text x="70" y="1535" font-size="18" fill="#5c1a1a">GTA trees often use a shader called <tspan font-weight="700">trees_normal_diffspec_tnt</tspan></text>
+<text x="70" y="1565" font-size="18" fill="#5c1a1a">The <tspan font-weight="700">_tnt</tspan> part means the game picks the colour from a small palette, and IGNORES your pink.</text>
+<text x="70" y="1605" font-size="18" fill="#5c1a1a" font-weight="700">Fix:</text>
+<text x="110" y="1635" font-size="18" fill="#5c1a1a">1.  Open the .ydr model in <tspan font-weight="700">CodeWalker</tspan> → look at the material name.</text>
+<text x="110" y="1665" font-size="18" fill="#5c1a1a">2.  If it ends in <tspan font-weight="700">_tnt</tspan> , change it to <tspan font-weight="700">trees_normal_diffspec</tspan> (no _tnt). Save.</text>
+<text x="110" y="1692" font-size="16" fill="#8a3a3a">Check this BEFORE you start painting — it saves you hours.</text>
+</svg>
