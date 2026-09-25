@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diary Page</title>
+<style>
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9dr0Wd4kDdMuhW.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9Qr0Wd4kDdMtDqHQLL.ttf') format('truetype');font-weight:700;}
+  @font-face{font-family:'Script';src:url('file:///root/.fonts/Caveat_WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SII.ttf') format('truetype');font-weight:400 700;}
+  @font-face{font-family:'Stamp';src:url('file:///root/.fonts/Patrick_LDI1apSQOAYtSuYWp8ZhfYeMWQ.ttf') format('truetype');}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Regular.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Bold.ttf') format('truetype');font-weight:700;}
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --wine:#7b1e2b; --wine2:#a32e3e; --dark:#2b1a1d; --sand:#f6f1e7;
+    --paper:#ffffff; --muted:#8b7d74; --gold:#b98b2e;
+  }
+  body{width:1240px;background:#ece7dd;padding:44px;font-family:'Body',cursive;}
+
+  .sheet{width:1152px;background:var(--paper);position:relative;overflow:hidden;
+    box-shadow:0 20px 50px rgba(60,40,35,.28);}
+  /* left spine */
+  .sheet:before{content:"";position:absolute;left:0;top:0;bottom:0;width:16px;
+    background:linear-gradient(180deg,var(--wine),var(--wine2));}
+
+  /* Masthead */
+  .mast{padding:38px 56px 26px 66px;border-bottom:4px double #ddd2c2;position:relative;}
+  .mast .kicker{font-size:15px;letter-spacing:9px;text-transform:uppercase;color:var(--gold);
+    font-weight:700;}
+  .mast h1{font-family:'Script';font-size:64px;font-weight:700;color:var(--wine);
+    line-height:1;margin:6px 0 4px;letter-spacing:.5px;}
+  .mast .sub{font-size:19px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+  .seal{position:absolute;right:56px;top:40px;width:104px;height:104px;border-radius:50%;
+    border:3px solid var(--wine);display:flex;flex-direction:column;align-items:center;
+    justify-content:center;color:var(--wine);background:var(--sand);
+    box-shadow:0 3px 10px rgba(0,0,0,.14);}
+  .seal b{font-family:'Script';font-size:40px;line-height:1;}
+  .seal i{font-style:normal;font-size:11px;letter-spacing:2px;margin-top:2px;}
+
+  /* Date strip */
+  .strip{display:flex;background:var(--dark);color:#fff;padding:14px 56px 14px 66px;gap:60px;
+    align-items:center;}
+  .strip .u{display:flex;align-items:baseline;gap:14px;}
+  .strip .k{font-size:15px;letter-spacing:4px;text-transform:uppercase;opacity:.65;}
+  .strip .v{font-family:'Script';font-size:36px;font-weight:700;line-height:1;color:#f3d79a;}
+  .strip .sp{flex:1;}
+  .strip .cnt{font-size:16px;letter-spacing:3px;text-transform:uppercase;opacity:.75;}
+
+  /* Grid */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;}
+  .cell{padding:22px 30px 20px;border-bottom:1px solid #eae2d5;border-right:1px solid #eae2d5;
+    position:relative;min-height:132px;}
+  .cell:nth-child(2n){border-right:none;}
+  .cell:nth-child(7),.cell:nth-child(8){border-bottom:none;}
+  .cell.remarks{background:var(--sand);}
+  .rl{border-bottom:1.5px dotted #c9bda9;height:30px;margin:0 6px;}
+
+  .hdr{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+  .no{width:30px;height:30px;border-radius:50%;background:var(--wine);color:#fff;flex:none;
+    display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;}
+  .nm{font-size:27px;font-weight:700;color:var(--dark);line-height:1;}
+  .nm em{font-style:normal;font-family:'Urdu';font-size:16px;color:var(--muted);margin-right:0;
+    margin-left:10px;}
+  .tst{margin-left:auto;font-family:'Stamp';font-size:14px;letter-spacing:2px;color:var(--wine);
+    border:2px solid var(--wine);border-radius:4px;padding:2px 10px 3px;}
+
+  .txt{font-family:'Script';font-size:31px;font-weight:700;color:#3a2a2c;line-height:1.25;
+    padding-left:42px;}
+  .txt.ur{font-family:'Urdu';direction:rtl;text-align:right;font-size:25px;font-weight:400;
+    line-height:2;padding-left:0;padding-right:42px;}
+
+  /* Footer */
+  .ft{display:flex;align-items:flex-end;gap:54px;padding:28px 56px 32px 66px;
+    background:var(--sand);border-top:4px double #ddd2c2;}
+  .sg{flex:1;font-size:17px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+  .sg .ln{display:block;border-bottom:2px solid #c9bda9;margin-bottom:8px;height:44px;}
+  .ok{font-family:'Stamp';font-size:25px;color:var(--wine);border:3px solid var(--wine);
+    border-radius:8px;padding:7px 18px 9px;transform:rotate(-6deg);opacity:.8;letter-spacing:3px;}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="mast">
+    <div class="kicker">Fauji Foundation School</div>
+    <h1>Homework Diary</h1>
+    <div class="sub">Daily Subject Record</div>
+    <div class="seal"><b>FFS</b><i>SCHOOL</i></div>
+  </div>
+
+  <div class="strip">
+    <div class="u"><span class="k">Day</span><span class="v">Friday</span></div>
+    <div class="u"><span class="k">Date</span><span class="v">25 September</span></div>
+    <div class="sp"></div>
+    <div class="cnt">07 Subjects</div>
+  </div>
+
+  <div class="grid">
+    <div class="cell">
+      <div class="hdr"><span class="no">1</span><span class="nm">Geography</span><span class="tst">TEST</span></div>
+      <div class="txt">Unit #1, 2, 5<br>All Short Questions</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">2</span><span class="nm">History</span><span class="tst">TEST</span></div>
+      <div class="txt">Unit #6, Pg 111&ndash;113<br>Mind Maps</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">3</span><span class="nm">Science</span><span class="tst">TEST</span></div>
+      <div class="txt">Unit #8<br>Full Copy + Book Work</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">4</span><span class="nm">English</span><span class="tst">TEST</span></div>
+      <div class="txt">Unit #3<br>Full Book + Copy Work</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">5</span><span class="nm">Math</span><span class="tst">TEST</span></div>
+      <div class="txt">Unit #7<br>Full Test</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">6</span><span class="nm">Islamiyat<em>اسلامیات</em></span><span class="tst">TEST</span></div>
+      <div class="txt ur">تمام معروضی اسباق</div>
+    </div>
+    <div class="cell">
+      <div class="hdr"><span class="no">7</span><span class="nm">Urdu<em>اردو</em></span><span class="tst">TEST</span></div>
+      <div class="txt ur">مضمون &rdquo;برسات&ldquo;</div>
+    </div>
+    <div class="cell remarks">
+      <div class="hdr"><span class="nm" style="color:var(--muted);font-size:22px;letter-spacing:3px;text-transform:uppercase">Remarks</span></div>
+      <div class="rl"></div><div class="rl"></div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <div class="sg"><span class="ln"></span>Teacher&rsquo;s Sign &amp; Date</div>
+    <div class="sg"><span class="ln"></span>Parent&rsquo;s Sign &amp; Date</div>
+    <div class="ok">CHECKED</div>
+  </div>
+
+</div>
+</body>
+</html>
