@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diary Page</title>
+<style>
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9dr0Wd4kDdMuhW.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9Qr0Wd4kDdMtDqHQLL.ttf') format('truetype');font-weight:700;}
+  @font-face{font-family:'Script';src:url('file:///root/.fonts/Caveat_WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SII.ttf') format('truetype');font-weight:400 700;}
+  @font-face{font-family:'Stamp';src:url('file:///root/.fonts/Patrick_LDI1apSQOAYtSuYWp8ZhfYeMWQ.ttf') format('truetype');}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Regular.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Bold.ttf') format('truetype');font-weight:700;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{width:1100px;background:#0f1724;padding:44px;font-family:'Body',cursive;}
+
+  .card{width:1012px;background:#151f30;border-radius:24px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.55);border:1px solid #27354a;}
+
+  .top{padding:30px 42px 26px;background:linear-gradient(120deg,#182a45,#1d3d63 60%,#17608a);
+    position:relative;display:flex;align-items:center;gap:18px;}
+  .top:after{content:"";position:absolute;left:42px;right:42px;bottom:0;height:2px;
+    background:linear-gradient(90deg,transparent,#f0c260,transparent);}
+  .cr{width:58px;height:58px;border-radius:16px;flex:none;display:flex;align-items:center;
+    justify-content:center;font-family:'Script';font-size:28px;font-weight:700;color:#12213a;
+    background:linear-gradient(140deg,#ffe9a8,#d9a531);box-shadow:0 4px 12px rgba(0,0,0,.4);}
+  .nm{font-family:'Script';font-size:42px;font-weight:700;color:#fff;line-height:1;}
+  .mt{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:#8fb6d8;margin-top:5px;}
+  .dt{margin-left:auto;text-align:right;}
+  .dt .d{font-family:'Script';font-size:38px;font-weight:700;color:#f0c260;line-height:1;}
+  .dt .s{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#8fb6d8;margin-top:5px;}
+
+  .ttl{padding:22px 42px 6px;font-size:14px;letter-spacing:7px;text-transform:uppercase;
+    color:#6e8caa;}
+  .rows{padding:6px 42px 30px;}
+  .r{display:flex;align-items:center;gap:18px;padding:15px 18px;margin-bottom:9px;
+    background:#1c2839;border-radius:14px;border-left:5px solid var(--c);
+    box-shadow:0 2px 6px rgba(0,0,0,.3);}
+  .r .ab{width:44px;height:44px;flex:none;border-radius:12px;display:flex;align-items:center;
+    justify-content:center;font-size:19px;font-weight:700;color:#0f1724;background:var(--c);}
+  .r .sn{width:186px;flex:none;}
+  .r .sn b{font-size:25px;color:#eaf2fb;font-weight:700;display:block;line-height:1.05;}
+  .r .sn i{font-style:normal;font-family:'Urdu';font-size:15px;color:#7f9ab5;}
+  .r .wk{flex:1;font-family:'Script';font-size:29px;font-weight:700;color:#cfe2f5;}
+  .r .wk.ur{font-family:'Urdu';direction:rtl;text-align:right;font-size:23px;font-weight:400;
+    line-height:2;}
+  .r .tg{flex:none;font-family:'Stamp';font-size:13px;letter-spacing:2px;color:#0f1724;
+    background:var(--c);border-radius:6px;padding:4px 12px 5px;}
+
+  .ft{display:flex;align-items:center;gap:30px;padding:18px 42px 26px;border-top:1px solid #27354a;}
+  .sg{flex:1;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#6e8caa;}
+  .sg span{display:block;border-bottom:1.5px solid #3a4c66;height:30px;margin-bottom:7px;}
+  .ok{font-family:'Stamp';font-size:20px;color:#5fd08a;border:2.5px solid #5fd08a;
+    border-radius:9px;padding:6px 16px 7px;transform:rotate(-6deg);letter-spacing:2px;opacity:.9;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <div class="cr">FFS</div>
+    <div>
+      <div class="nm">Fauji Foundation School</div>
+      <div class="mt">Homework Diary</div>
+    </div>
+    <div class="dt"><div class="d">Friday</div><div class="s">25 September</div></div>
+  </div>
+
+  <div class="ttl">Subjects &amp; Work</div>
+  <div class="rows">
+    <div class="r" style="--c:#4fb3ff"><div class="ab">1</div><div class="sn"><b>Geography</b></div>
+      <div class="wk">Unit #1, 2, 5 &mdash; All Short Questions</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#f0a35e"><div class="ab">2</div><div class="sn"><b>History</b></div>
+      <div class="wk">Unit #6, Pg 111&ndash;113 &mdash; Mind Maps</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#5fd08a"><div class="ab">3</div><div class="sn"><b>Science</b></div>
+      <div class="wk">Unit #8 &mdash; Full Copy + Book Work</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#c9a7f5"><div class="ab">4</div><div class="sn"><b>Islamiyat</b><i>اسلامیات</i></div>
+      <div class="wk ur">تمام معروضی اسباق</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#f58ba8"><div class="ab">5</div><div class="sn"><b>Urdu</b><i>اردو</i></div>
+      <div class="wk ur">مضمون &rdquo;برسات&ldquo;</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#7fd8d8"><div class="ab">6</div><div class="sn"><b>English</b></div>
+      <div class="wk">Unit #3 &mdash; Full Book + Copy Work</div><div class="tg">TEST</div></div>
+    <div class="r" style="--c:#f0c260"><div class="ab">7</div><div class="sn"><b>Math</b></div>
+      <div class="wk">Unit #7 &mdash; Full Test</div><div class="tg">TEST</div></div>
+  </div>
+
+  <div class="ft">
+    <div class="sg"><span></span>Teacher&rsquo;s Sign &amp; Date</div>
+    <div class="sg"><span></span>Parent&rsquo;s Sign &amp; Date</div>
+    <div class="ok">CHECKED</div>
+  </div>
+</div>
+</body>
+</html>
