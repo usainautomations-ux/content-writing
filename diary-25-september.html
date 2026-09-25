@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diary Page</title>
+<style>
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9dr0Wd4kDdMuhW.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Body';src:url('file:///root/.fonts/Kalam_YA9Qr0Wd4kDdMtDqHQLL.ttf') format('truetype');font-weight:700;}
+  @font-face{font-family:'Script';src:url('file:///root/.fonts/Caveat_WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SII.ttf') format('truetype');font-weight:400 700;}
+  @font-face{font-family:'Stamp';src:url('file:///root/.fonts/Patrick_LDI1apSQOAYtSuYWp8ZhfYeMWQ.ttf') format('truetype');}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Regular.ttf') format('truetype');font-weight:400;}
+  @font-face{font-family:'Urdu';src:url('file:///root/.fonts/NotoNastaliqUrdu-Bold.ttf') format('truetype');font-weight:700;}
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --ink:#1c2b3a; --brand:#0e3a5f; --brand2:#1f6f8b; --accent:#c0392b;
+    --gold:#c99a2e; --soft:#eef4f8; --line:#d7e2ec;
+  }
+  body{width:1200px;background:#c4cdd6;font-family:'Body',cursive;padding:46px;}
+
+  .card{
+    width:1108px;background:#fffdf8;border-radius:26px;overflow:hidden;position:relative;
+    box-shadow:0 26px 60px rgba(20,40,60,.34), 0 4px 12px rgba(20,40,60,.18);
+    border:1px solid #e7ded0;
+  }
+
+  /* Header band */
+  .top{
+    position:relative;padding:34px 48px 30px;color:#fff;
+    background:linear-gradient(135deg,#0e3a5f 0%,#1f6f8b 62%,#2b93a8 100%);
+  }
+  .top:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;
+    background:linear-gradient(90deg,#c99a2e,#f2c94c,#c99a2e);}
+  .brandrow{display:flex;align-items:center;gap:18px;}
+  .crest{width:66px;height:66px;border-radius:50%;flex:none;
+    background:radial-gradient(circle at 35% 30%,#fbe7a6,#c99a2e);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Script';font-size:40px;font-weight:700;color:#0e3a5f;
+    box-shadow:inset 0 -3px 8px rgba(0,0,0,.25),0 3px 8px rgba(0,0,0,.25);}
+  .ttl{font-family:'Script';font-size:56px;font-weight:700;line-height:1;letter-spacing:.5px;}
+  .sub{font-size:19px;letter-spacing:5px;text-transform:uppercase;opacity:.9;margin-top:4px;}
+
+  .meta{display:flex;gap:20px;margin-top:26px;}
+  .chip{flex:1;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);
+    border-radius:14px;padding:12px 22px;display:flex;align-items:center;gap:14px;
+    backdrop-filter:blur(2px);}
+  .chip .k{font-size:20px;letter-spacing:2px;text-transform:uppercase;opacity:.85;}
+  .chip .v{font-family:'Script';font-size:38px;font-weight:700;color:#fff;line-height:1;
+    text-shadow:0 1px 2px rgba(0,0,0,.25);}
+
+  /* Table */
+  .body{padding:16px 44px 6px;}
+  table{width:100%;border-collapse:separate;border-spacing:0;}
+  thead th{font-size:20px;letter-spacing:2px;text-transform:uppercase;color:var(--brand);
+    text-align:left;padding:16px 18px 12px;border-bottom:3px solid var(--gold);}
+  thead th.t2{padding-left:26px;}
+  tbody tr:nth-child(even){background:var(--soft);}
+  tbody td{padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:none;}
+
+  .subj{width:280px;}
+  .subj .name{font-size:30px;font-weight:700;color:var(--brand);line-height:1.05;}
+  .subj .ic{display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:12px;margin-right:14px;font-size:24px;
+    background:linear-gradient(135deg,#e8f1f6,#cfe3ec);vertical-align:middle;
+    box-shadow:inset 0 -2px 4px rgba(0,0,0,.06);}
+  .subj .row{display:flex;align-items:center;}
+
+  .work{font-size:27px;color:var(--ink);padding-left:26px;line-height:1.4;}
+  .work .en{font-family:'Script';font-size:33px;font-weight:700;color:#16405e;}
+  .work .ur{font-family:'Urdu';direction:rtl;font-size:26px;line-height:2.2;color:#16405e;
+    display:inline-block;}
+  .pill{display:inline-block;font-family:'Stamp';font-size:16px;letter-spacing:2px;
+    color:#7a2018;background:#ffe1dc;border:1.5px solid #e08a7f;border-radius:20px;
+    padding:2px 14px 3px;margin-left:12px;transform:translateY(-3px);vertical-align:middle;}
+
+  /* Footer */
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;
+    padding:26px 48px 34px;background:linear-gradient(0deg,#f4efe4,#fffdf8);
+    border-top:2px dashed #e0d4bd;margin-top:8px;}
+  .sg{font-family:'Script';font-size:30px;color:#5a6b78;}
+  .sg .ln{display:block;width:280px;border-bottom:2.5px dotted #9aa7b2;margin-top:26px;height:2px;}
+  .stamp{font-family:'Stamp';font-size:30px;color:#1d7a3f;border:3.5px solid #1d7a3f;
+    border-radius:14px;padding:8px 22px 11px;transform:rotate(-8deg);opacity:.85;
+    letter-spacing:3px;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <div class="brandrow">
+      <div class="crest">HW</div>
+      <div>
+        <div class="ttl">Homework Diary</div>
+        <div class="sub">Daily Subject Planner</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="chip"><span class="k">Day</span><span class="v">Friday</span></div>
+      <div class="chip"><span class="k">Date</span><span class="v">25 September</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+    <table>
+      <thead>
+        <tr><th class="t1">Subject</th><th class="t2">Topic / Syllabus / Work</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">🌍</span><span class="name">Geography</span></div></td>
+          <td class="work"><span class="en">Unit #1, 2, 5 &mdash; All Short Questions</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">📜</span><span class="name">History</span></div></td>
+          <td class="work"><span class="en">Unit #6, Pg 111&ndash;113 &mdash; Mind Maps</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">🔬</span><span class="name">Science</span></div></td>
+          <td class="work"><span class="en">Unit #8 &mdash; Full Copy + Book Work</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">🕌</span><span class="name">Islamiyat<br><span style="font-family:'Urdu';font-size:18px;font-weight:400;color:#6b7480">اسلامیات</span></span></div></td>
+          <td class="work"><span class="ur">تمام مروجہ اسباق ٹیسٹ</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">📖</span><span class="name">Urdu<br><span style="font-family:'Urdu';font-size:18px;font-weight:400;color:#6b7480">اردو</span></span></div></td>
+          <td class="work"><span class="ur">مضمون &rdquo;برسات&ldquo; ٹیسٹ</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">🔤</span><span class="name">English</span></div></td>
+          <td class="work"><span class="en">Unit #3 &mdash; Full Book + Copy Work</span> <span class="pill">TEST</span></td>
+        </tr>
+        <tr>
+          <td class="subj"><div class="row"><span class="ic">🔢</span><span class="name">Math</span></div></td>
+          <td class="work"><span class="en">Unit #7 &mdash; Full Test</span> <span class="pill">TEST</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="foot">
+    <div class="sg">Teacher&rsquo;s Sign &amp; Date <span class="ln"></span></div>
+    <div class="sg">Parent&rsquo;s Sign &amp; Date <span class="ln"></span></div>
+    <div class="stamp">CHECKED</div>
+  </div>
+</div>
+</body>
+</html>
